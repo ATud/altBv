@@ -1,0 +1,46 @@
+img.team_pic {
+    height: 100px;
+    width: 100px;
+}
+
+
+body{
+    padding: 5%;
+}
+
+#content {
+    float: left;
+    width: 50%;
+}
+
+#details {
+    float: left;
+    width: 30%;
+    margin-left: 5%;
+}
+#teams, #all-details {
+    margin-top: 30px;
+}
+
+#teams .team {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#teams th {
+    font-size: 24px;
+}
+
+#teams td, table#teams th {
+    padding: 12px;
+}
+#teams td>img{
+    width: 200px;
+    height: 200px;
+}
+
+body .table tbody tr:hover td,
+body .table tbody tr:hover th {
+  background-color: #b5b5b5;
+  cursor: pointer;
+}
