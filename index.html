@@ -11,6 +11,46 @@
     <div id="details">
     </div>
 
+<!--Template echipa -->
+    <script type="text/template" id="team-template">
+      <td><%= name %></td>
+      <td><img src='<%= path %>'/></td>
+    </script>
+
+<!-- Template colectie de echipe-->
+    <script type="text/template" id="teams-template">
+        <thead>
+            <tr class='header'>
+                <th>Name</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </script>
+
+<!--Template detaliu -->
+    <script type="text/template" id="detail-template">
+      <td><%= id %></td>
+      <td><%= name %></td>
+      <td><%= getDescription() %></td>
+      <td><%= aProperty %></td>
+
+    </script>
+
+<!-- Template colectie de detalii-->
+    <script type="text/template" id="all-details-template">
+        <thead>
+            <tr class='header'>
+                <th>User Id</th>
+                <th>User Name</th>
+                <th>User Description</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </script>
+
     <!-- Vendor -->    
         <script src="vendor/jQuery-1.11.1.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
