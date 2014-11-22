@@ -1,38 +1,43 @@
 //---------VIEWS----------
 var TeamView = Backbone.Marionette.ItemView.extend({
-	template: "#team-template",
+	template: "#team-template"
 
-	tagName: 'tr',
+	, tagName: 'tr'
 
-	className: 'team',
+	, className: 'team'
 
-	events: {
+	, events: {
 		'click img': 'showDetails'
-	},
+		, 'click .teamName': 'goToTeam'
+	}
 
-	showDetails: function(){
+	, showDetails: function(){
 		MyApp.vent.trigger('change:api',this.model.id);
+	}
+
+	, goToTeam: function(id){
+		Backbone.history.navigate("#team/"+this.model.get('id'), {trigger: true}); 
 	}
 });
 
 var TeamsView = Backbone.Marionette.CompositeView.extend({
-	tagName: "table",
+	tagName: "table"
 	
-	id: "teams",
+	, id: "teams"
 	
-	className: "table table-striped table-hover",
+	, className: "table table-striped table-hover"
 	
-	template: "#teams-template",
+	, template: "#teams-template"
 	
-	itemView: TeamView,
+	, itemView: TeamView
 
-	initialize: function(){
+	, initialize: function(){
 		this.listenTo(this.collection, "sort", this.renderCollection);
-	},
+	}
 
-	appendHtml: function(collectionView, itemView){
+	, appendHtml: function(collectionView, itemView){
 		collectionView.$("tbody").append(itemView.el);
-	},
+	}
 
 });
 

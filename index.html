@@ -13,8 +13,10 @@
 
 <!--Template echipa -->
     <script type="text/template" id="team-template">
-      <td><%= name %></td>
-      <td><img src='<%= path %>'/></td>
+        <td>
+            <span class="teamName btn-link"><%= name %></span>
+        </td>
+        <td><img src='<%= path %>'/></td>
     </script>
 
 <!-- Template colectie de echipe-->
@@ -51,6 +53,23 @@
         </tbody>
     </script>
 
+<!-- Template detaliu echipa-->
+    <script type="text/template" id="team-layout">
+        <div id="teamContent">
+        </div>
+    </script>
+
+    <script type="text/template" id="team-item">
+        <div class="col-md-12">
+            <input id="goBack" type="button" class="btn btn-primary" value="Go Home"/>
+        </div>
+        <h2 class="bg-success col-md-6">User Id: <%= id %></h2>
+        <h2 class="bg-danger col-md-6">Nume echipa: <%= name %></h2>
+        <div class="bg-primary col-md-12 text-center"><img src='<%= path %>'/></div>
+        <p class="col-md-12 text-center"><%= description %></p>
+    </script>
+
+
     <!-- Vendor -->    
         <script src="vendor/jQuery-1.11.1.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
@@ -59,6 +78,9 @@
         <script src="vendor/backbone.marionette.js"></script>
     <!-- main, modele, view-uri -->
         <script src="main.js"></script>
+
+        <script src="js/controller.js"></script>
+        <script src="js/router.js"></script>        
 
         <script src="js/models.js"></script>
         <script src="js/views.js"></script>
