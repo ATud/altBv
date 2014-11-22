@@ -1,1 +1,1 @@
-set PATH=%PATH%;%~dp0nodejs\; && npm install connect serve-static && node server.js
+set PATH=%PATH%;%~dp0nodejs\; && npm install express && npm install ejs && node server.js

@@ -70,8 +70,11 @@ MyApp.Controller = function(){
 			})
 		});
 
+		var nodeView = new NodeView();
+
 		MyApp.tableRegion.show(teamsView);
 		MyApp.detailRegion.show(detailsView);
+		MyApp.nodeRegion.show(nodeView);
 	}
 
 	Controller.showTeamDetail = function(id){
@@ -90,7 +93,6 @@ MyApp.Controller = function(){
 		});
 		MyApp.tableRegion.show(teamsView);		
 	}
-
 
 	return Controller;
 }();

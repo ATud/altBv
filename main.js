@@ -2,8 +2,9 @@ MyApp = new Backbone.Marionette.Application();
  
 // --- Aplicatia Globala
 MyApp.addRegions({
-  tableRegion: "#content",
-  detailRegion: "#details"
+  tableRegion: "#content"
+  , detailRegion: "#details"
+  , nodeRegion: "#node"
 });
 
 

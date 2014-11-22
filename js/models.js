@@ -34,3 +34,21 @@ var DetailsCollection = Backbone.Collection.extend({
 	}
 	, model: DetailModel
 });
+
+//
+var NodeModel = Backbone.Model.extend({
+	defaults: {
+		id: ''
+		, description: ''
+		, nrSuporters: ''
+	}
+
+	, url: function(){
+		return '/api/22';
+	}
+
+	,initialize: function(){
+		this.set('id',1);
+		this.fetch();
+	}
+});

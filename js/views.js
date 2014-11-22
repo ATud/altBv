@@ -65,3 +65,14 @@ var AllDetailsView = Backbone.Marionette.CompositeView.extend({
 		collectionView.$("tbody").append(itemView.el);
 	}
 });
+
+// View cu info venita de la node.js
+var NodeView = Backbone.Marionette.ItemView.extend({
+	template: "#nodejs-layout"
+	, tagName: 'div'
+	, className: 'col-md-12'
+	, model: new NodeModel()
+	, initialize: function(){
+    	this.model.on("sync", this.render, this);
+  	},
+});
